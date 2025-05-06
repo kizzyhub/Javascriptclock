@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="clock.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>JAVA CLOCK</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="clock">
-        <div class="hour">
-            <div class="hr" id="hr"></div>
-        </div>
-        <div class="min">
-            <div class="mn" id="mn"></div>
-        </div>
-        <div class="sec">
-            <div class="sc" id="sc"></div>
-        </div>
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
     </div>
 
     <script type="text/javascript">
+      var second = 0;
+      var minute = 0;
+      var hour = 0;
+      var d = new Date();
 
-var second = 0;
-var minute = 0;
-var hour = 0;
-var d = new Date();
-
-setInterval(
-    function(){
+      setInterval(function () {
         d = new Date();
-        second = d.getSeconds() *6;
-        minute = d.getMinutes() *6;
-        hour = d.getHours() *30 + Math.round(minute / 12);
-        document.getElementById("hr").style.transform = "rotate(" + hour +"deg)";
-        document.getElementById("mn").style.transform = "rotate(" + minute +"deg)";
-        document.getElementById("sc").style.transform = "rotate(" + second +"deg)";
-
-
-    }, 1000
-); 
-      
+        second = d.getSeconds() * 6;
+        minute = d.getMinutes() * 6;
+        hour = d.getHours() * 30 + Math.round(minute / 12);
+        document.getElementById("hr").style.transform =
+          "rotate(" + hour + "deg)";
+        document.getElementById("mn").style.transform =
+          "rotate(" + minute + "deg)";
+        document.getElementById("sc").style.transform =
+          "rotate(" + second + "deg)";
+      }, 1000);
     </script>
-    
-
-
-
-    
-</body>
+  </body>
 </html>
