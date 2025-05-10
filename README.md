@@ -1,12 +1,5 @@
 # Javascript Clock
 
-## Demo Video
-
-<video width="600" controls>
-  <source src="vd" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 A responsive and visually appealing clock built using HTML, CSS, and JavaScript. This project demonstrates how to create a clock that displays the current time dynamically.
 
 ## Features
